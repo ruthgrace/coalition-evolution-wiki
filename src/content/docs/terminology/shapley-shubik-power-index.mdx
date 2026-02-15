@@ -1,0 +1,71 @@
+---
+title: Shapley-Shubik Power Index
+description: A game-theoretic measure of each player's influence in a coalition-based voting system, based on how often they are the pivotal vote.
+---
+
+The **Shapley-Shubik power index** is a method for quantifying the power of each player in a voting game — any system where decisions are made by coalitions of actors whose combined weight crosses some threshold. Developed by [Lloyd Shapley and Martin Shubik in 1954](/papers/shapley-shubik-power-index/), it measures power not by a player's raw weight (seats, votes, shares) but by how often they are **pivotal**: the player whose addition to a growing coalition turns it from losing to winning.
+
+## How It Works
+
+1. Consider all possible **orderings** of players joining a coalition one by one
+2. For each ordering, identify the **pivotal player** — the one whose entry pushes the coalition past the winning threshold
+3. A player's power index equals the **fraction of all orderings in which they are pivotal**
+4. All players' indices sum to 1
+
+For a game with *n* players, there are *n!* (n factorial) possible orderings. The computation becomes expensive for large games but is straightforward for the small-to-medium-sized voting bodies where it's most commonly applied.
+
+## Intuition
+
+The key insight is that **power is about being decisive, not about being large**. A player who holds 49% of the votes in a simple majority system is extremely powerful — but so is a player who holds just 2% if they are the one who tips the balance. The Shapley-Shubik index captures this by treating all orderings as equally probable and asking: across all possible ways the coalition could have formed, how often was this player the one who made the difference?
+
+## Example: A Three-Player Game
+
+Consider three parties with seat shares of 50, 30, and 20, where a majority (51+) is required:
+
+| Ordering | Pivotal Player |
+|---|---|
+| A → B → C | A (reaches 50... still losing; B joins → 80, B is pivot) — actually A alone is 50, not winning. B joins → 80 ✓. **B is pivot.** |
+| A → C → B | A=50, +C=70 ✓. **C is pivot.** |
+| B → A → C | B=30, +A=80 ✓. **A is pivot.** |
+| B → C → A | B=30, +C=50, +A=100 ✓. **A is pivot.** |
+| C → A → B | C=20, +A=70 ✓. **A is pivot.** |
+| C → B → A | C=20, +B=50, +A=100 ✓. **A is pivot.** |
+
+**Result**: A is pivotal in 4/6 orderings, B in 1/6, C in 1/6.
+
+Power index: A = 4/6 ≈ 0.67, B = 1/6 ≈ 0.17, C = 1/6 ≈ 0.17.
+
+Notice that A has 50% of the seats but 67% of the power. B and C have equal power (17% each) despite B having 50% more seats than C. This divergence between weight and power is exactly what the index is designed to reveal.
+
+## Applications
+
+| Setting | What the Index Reveals |
+|---|---|
+| **UN Security Council** | Each permanent member (with veto) holds ~19.6% of power; each non-permanent member holds ~0.19% |
+| **EU Council of Ministers** | Power shifts with each enlargement as new members change who is pivotal |
+| **US Electoral College** | Voters in large swing states have disproportionate pivotal influence |
+| **Corporate governance** | Minority shareholders with blocking stakes can wield outsized power |
+| **Parliamentary coalitions** | Small "kingmaker" parties can have influence far beyond their seat share |
+
+## Comparison with the Banzhaf Index
+
+The main alternative is the **Banzhaf power index** (1965), which counts how often a player is a **swing voter** — a player whose removal from a winning coalition makes it losing — without considering the ordering of coalition formation. The two indices often agree but can diverge:
+
+| Feature | Shapley-Shubik | Banzhaf |
+|---|---|---|
+| Considers ordering | Yes | No |
+| Assumption | All orderings equally likely | All coalitions equally likely |
+| Sum of indices | Always equals 1 | Does not necessarily equal 1 (unnormalized) |
+| Interpretation | Expected marginal contribution | Probability of being decisive |
+
+## Limitations
+
+- **Static**: Measures power in a fixed game; doesn't capture dynamic shifts in coalition formation
+- **Assumes all orderings equally likely**: In practice, some coalition formation sequences are more plausible than others
+- **Ignores preferences**: The index treats all winning coalitions as equally valuable, ignoring ideological or policy considerations
+- **Computationally expensive for large games**: *n!* orderings grow rapidly
+
+## See Also
+
+- [Shapley & Shubik — Power Index for Coalition Influence (1954)](/papers/shapley-shubik-power-index/)
+- [Coalition Analysis (section)](/sections/coalition-analysis/)

@@ -1,0 +1,65 @@
+---
+title: "Shapley & Shubik — Power Index for Coalition Influence (1954)"
+description: "A game-theoretic method for measuring how much power each player has in a coalition-based voting system."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="tip" title="Impact">
+**Tier:** Foundational | **Citations:** ~5,500 (Google Scholar, approximate)
+</Aside>
+
+Lloyd Shapley and Martin Shubik's 1954 paper "A Method for Evaluating the Distribution of Power in a Committee System" introduced the **Shapley-Shubik power index**, one of the most widely used tools for measuring power in coalition settings. The index quantifies a player's power not by their raw resources (votes, seats, wealth) but by how often they are **pivotal** — the player whose addition to a growing coalition turns it from losing to winning.
+
+The insight is subtle but important: in coalition-based systems, raw size doesn't fully determine influence. A small party that is frequently the decisive vote in forming a majority can have power far exceeding its seat share. Conversely, a large party in a system with many possible majority coalitions may have less leverage than its size suggests. The Shapley-Shubik index captures this by considering all possible orderings of players joining a coalition and counting how often each player is the pivot.
+
+The index has been applied to an enormous range of settings: the UN Security Council, the EU Council of Ministers, the US Electoral College, corporate shareholder voting, and parliamentary systems worldwide. It remains a foundational tool in both cooperative game theory and the empirical study of institutional power.
+
+## Background
+
+The Shapley-Shubik index is derived from the **Shapley value**, a solution concept in cooperative game theory developed by Lloyd Shapley in 1953. The Shapley value assigns to each player their average marginal contribution across all possible coalition orderings. When applied to voting games (where contributions are binary — pivotal or not), it becomes the power index.
+
+For a voting game with *n* players, the index is computed by:
+1. Considering all *n!* possible orderings of players
+2. For each ordering, identifying the **pivotal player** — the one whose vote pushes the coalition past the majority threshold
+3. Each player's power index equals the fraction of orderings in which they are pivotal
+
+## Key Arguments
+
+| Concept | Description |
+|---|---|
+| **Pivotal Player** | The player whose addition to a coalition turns it from losing to winning |
+| **Power ≠ Size** | A player's influence depends on the structure of the game, not just their weight |
+| **All Orderings** | The index considers every possible sequence of coalition formation |
+| **Normalization** | The power indices of all players sum to 1 (power is a share of total influence) |
+
+## Applied Examples
+
+| Setting | Key Finding |
+|---|---|
+| **UN Security Council** | Each of the 5 permanent members (with veto power) has a Shapley-Shubik index of ~19.6%, while each of the 10 non-permanent members has only ~0.19% — despite being 10 of 15 members |
+| **EU Council of Ministers** | Power distribution shifted significantly with each EU enlargement; some small member states gained or lost pivotal status |
+| **US Electoral College** | Voters in large swing states have disproportionate power because those states are more often pivotal |
+| **Corporate Boards** | A minority shareholder with a blocking stake can have power disproportionate to their ownership share |
+
+## Comparison with Other Power Indices
+
+| Index | Basis | Key Difference |
+|---|---|---|
+| **Shapley-Shubik (1954)** | All orderings of coalition formation | Assumes all orderings equally likely |
+| **Banzhaf (1965)** | All possible winning coalitions | Counts swing votes without considering ordering |
+| **Deegan-Packel (1978)** | Minimal winning coalitions only | Focuses on coalitions with no unnecessary members |
+
+The Shapley-Shubik and Banzhaf indices often give similar results but can diverge in weighted voting systems with unusual structures.
+
+## Open Questions
+
+- **Do real actors behave as if they know their power index?** The index is a theoretical construct; whether politicians and diplomats actually calibrate their strategies to their pivotal frequency is an empirical question.
+- **How should the index handle abstentions and partial participation?** The standard formulation assumes all players participate in every vote.
+- **Can the index capture dynamic coalition processes?** The Shapley-Shubik index is static — it measures power in a fixed game. Real coalition dynamics involve changing players, shifting preferences, and evolving institutional rules.
+
+## Further Reading
+
+- Shapley, Lloyd S., and Martin Shubik. "A Method for Evaluating the Distribution of Power in a Committee System." *American Political Science Review* 48, no. 3 (1954): 787–792.
+- [Gamson–Shapley Laws: a formal approach to parliamentary coalition formation](https://www.nature.com/articles/s41599-023-02207-7)
+- Felsenthal, Dan S., and Moshé Machover. *The Measurement of Voting Power*. Cheltenham: Edward Elgar, 1998.

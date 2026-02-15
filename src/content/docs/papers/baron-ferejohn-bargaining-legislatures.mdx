@@ -1,0 +1,67 @@
+---
+title: "Baron & Ferejohn — Bargaining in Legislatures (1989)"
+description: "The foundational non-cooperative bargaining model of legislative coalition formation, introducing proposer advantage and minimal winning predictions."
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="tip" title="Impact">
+**Tier:** Foundational | **Citations:** ~5,000 (Google Scholar, approximate)
+</Aside>
+
+David Baron and John Ferejohn's 1989 paper "Bargaining in Legislatures" established the workhorse formal model for studying legislative coalition formation. Unlike earlier cooperative game theory approaches (Riker, Gamson), Baron and Ferejohn modeled the coalition formation process itself as a **non-cooperative game** with explicit rules: a randomly selected proposer offers a division of resources, and a majority must accept or reject it. If rejected, a new proposer is selected and the process repeats.
+
+The model produces two key predictions that have shaped decades of subsequent research. First, **minimum winning coalitions** form in equilibrium — confirming Riker's intuition but deriving it from explicit strategic behavior rather than assuming it. Second, the **proposer captures a disproportionate share** of the surplus — the player who gets to make the offer has a significant structural advantage, because the other members' alternative (waiting for the next round) is costly due to discounting.
+
+This "proposer advantage" result has been enormously influential. It provides a formal foundation for studying the power of agenda-setters, formateurs, and committee chairs in legislatures, and explains why the party that leads coalition negotiations often secures more than its proportional share of cabinet portfolios.
+
+## Background
+
+The model's structure is simple but powerful:
+
+1. A legislator is randomly recognized as the **proposer**
+2. The proposer offers a division of a fixed budget among all legislators
+3. The legislature votes: if a majority accepts, the proposal is implemented
+4. If the proposal fails, a new proposer is randomly selected and the game continues
+5. Future payoffs are discounted, so delay is costly
+
+The key insight is that voters in the majority have a weak bargaining position: if they reject the current offer, they face uncertainty about whether they'll be included in the next proposal. This gives the proposer leverage.
+
+## Key Arguments
+
+| Concept | Description |
+|---|---|
+| **Proposer Advantage** | The agenda-setter captures a disproportionate share of the payoff |
+| **Minimum Winning Coalitions** | The proposer includes only enough votes to secure a majority |
+| **Random Recognition** | Who gets to propose is determined by a known probability rule |
+| **Discounting** | Delay is costly, which gives the current proposer leverage over potential rejecters |
+| **Non-Cooperative Foundation** | Coalition formation emerges from individual strategic choices, not assumed cooperative behavior |
+
+## Comparing Coalition Formation Models
+
+| Model | Approach | Key Prediction | Proposer Role |
+|---|---|---|---|
+| **Riker (1962)** | Cooperative game theory | Minimum winning coalitions | Not explicitly modeled |
+| **Gamson (1961)** | Proportionality norm | Payoffs proportional to resources | Not explicitly modeled |
+| **Baron & Ferejohn (1989)** | Non-cooperative bargaining | Minimum winning + proposer advantage | Central — proposer sets the agenda |
+| **Laver & Shepsle (1996)** | Portfolio allocation equilibrium | Stable ministerial assignments | Formateur proposes allocation |
+
+## Empirical Relevance
+
+The proposer advantage prediction has been tested in multiple settings:
+
+- **Formateur bonus in parliamentary coalitions**: The party that leads government formation often gets more cabinet seats than Gamson's Law predicts
+- **Committee chair power in legislatures**: Chairs who control the agenda extract disproportionate benefits for their districts
+- **International negotiations**: The party that drafts the initial proposal in treaty negotiations often shapes the final outcome
+
+## Open Questions
+
+- **How realistic is random recognition?** In real legislatures, proposal power is determined by institutional rules, party leadership, and seniority — not random selection. Extensions of the model incorporate more realistic recognition rules.
+- **What about multi-dimensional policy?** The basic model divides a fixed budget (one dimension). Real legislative bargaining involves multiple policy issues, which significantly complicates the analysis.
+- **Does the proposer advantage survive repeated interaction?** In legislatures where the same players bargain repeatedly, reputation and reciprocity may erode the proposer's leverage.
+
+## Further Reading
+
+- Baron, David P., and John A. Ferejohn. "Bargaining in Legislatures." *American Political Science Review* 83, no. 4 (1989): 1181–1206.
+- [A Bargaining Theory of Coalition Formation](https://www.cambridge.org/core/journals/british-journal-of-political-science/article/abs/bargaining-theory-of-coalition-formation/7D05021DACEC23861FA2596C88984AE1)
+- [A Game-Theoretic Perspective on Coalition Formation (PDF)](https://library.oapen.org/bitstream/handle/20.500.12657/49736/9780199207954.pdf)

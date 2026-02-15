@@ -1,0 +1,63 @@
+---
+title: Coalition Analysis Methods
+description: Tools and methods for measuring power, influence, and dynamics within coalitions.
+---
+
+Beyond the theories of *why* coalitions form, *how long* they last, and *how* they change, there is a body of research focused on **measuring** coalition dynamics — quantifying who has power, how much, and why. These analytical tools provide the formal machinery that underlies much of the theoretical work covered elsewhere in this review.
+
+The most influential contribution in this space is the [Shapley-Shubik power index](/papers/shapley-shubik-power-index/), which provides a rigorous, game-theoretic method for measuring each player's influence in any coalition-based voting system. But the broader landscape of coalition analysis includes competing power indices, empirical methods for studying coalition duration, and computational approaches to modeling coalition dynamics.
+
+## The Shapley-Shubik Power Index
+
+[Shapley and Shubik (1954)](/papers/shapley-shubik-power-index/) developed a method for measuring power that captures a fundamental insight: **influence in a coalition system depends not on raw size but on how often a player is pivotal**. A player is pivotal when their addition to a growing coalition turns it from losing to winning. The [Shapley-Shubik index](/terminology/shapley-shubik-power-index/) counts how often each player is pivotal across all possible orderings of coalition formation.
+
+This produces results that can diverge sharply from naive size-based measures:
+
+| Setting | Naive Measure | Shapley-Shubik Finding |
+|---|---|---|
+| **UN Security Council** | Permanent members are 5 of 15 (33%) | Each permanent member holds ~19.6% of power; each non-permanent member holds ~0.19% |
+| **EU Council of Ministers** | Votes proportional to population | Small states can be disproportionately pivotal after enlargement |
+| **US Electoral College** | Electoral votes proportional to population | Voters in large swing states have disproportionate influence |
+| **Corporate boards** | Ownership share | Minority shareholders with blocking stakes can have outsized power |
+
+The index has been used to analyze the distributional consequences of institutional reforms (e.g., EU treaty changes that alter voting weights) and to evaluate proposals for reforming international organizations.
+
+## Competing Approaches
+
+The Shapley-Shubik index is not the only method for measuring coalition power. Several alternatives have been developed, each with different assumptions:
+
+| Index | Year | Basis | Key Assumption |
+|---|---|---|---|
+| **Shapley-Shubik** | 1954 | All orderings of coalition formation | All orderings equally likely |
+| **Banzhaf** | 1965 | All possible winning coalitions | Counts swing votes without ordering |
+| **Deegan-Packel** | 1978 | Minimal winning coalitions only | Only coalitions with no unnecessary members matter |
+| **Holler (Public Good Index)** | 1982 | Minimal winning coalitions | Power is shared equally within each minimal winning coalition |
+
+These indices often agree in simple cases but can diverge significantly in weighted voting systems with unusual structures. The choice of index depends on assumptions about how coalition formation actually works in a given institutional context.
+
+## Beyond Static Measurement
+
+A limitation of power indices is that they are **static** — they measure power in a fixed institutional setting with fixed players. Real coalition dynamics involve:
+
+- **Changing players**: parties win and lose seats; states grow and decline
+- **Shifting preferences**: actors change their policy positions over time
+- **Evolving institutions**: voting rules, veto provisions, and membership criteria change
+
+Integrating dynamic analysis with power measurement remains an open frontier. Some approaches combine power indices with the duration models used by [Warwick](/papers/warwick-durability-coalition-governments/) and [Laver & Shepsle](/papers/laver-shepsle-making-breaking-governments/) to study how shifts in power distributions trigger coalition reorganization.
+
+## Empirical Methods in Coalition Research
+
+The study of coalition dynamics has also been shaped by methodological innovations:
+
+| Method | Application | Key Contribution |
+|---|---|---|
+| **Hazard/survival analysis** | Coalition duration | Warwick (1979): rising hazard rates in parliamentary governments |
+| **Spatial modeling** | Coalition formation | De Swaan, Laver & Shepsle: mapping parties in policy space |
+| **Structural estimation** | Formation and termination | Estimating game-theoretic model parameters from observed coalitions |
+| **Comparative case studies** | Historical analysis | Luebbert (1991): class coalitions and regime outcomes |
+
+## Key Papers
+
+- [Axelrod — Conflict of Interest and Connected Coalitions (1970)](/papers/axelrod-conflict-of-interest/)
+- [De Swaan — Policy Distance and Closed Minimal Range Theory (1973)](/papers/de-swaan-policy-distance-theory/)
+- [Shapley & Shubik — Power Index for Coalition Influence (1954)](/papers/shapley-shubik-power-index/)
