@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://ruthgracewong.github.io',
+	site: 'https://ruthgrace.github.io',
 	base: '/coalition-evolution-wiki',
 	integrations: [
 		starlight({
