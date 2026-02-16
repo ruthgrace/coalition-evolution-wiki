@@ -10,6 +10,7 @@ export default defineConfig({
 		starlight({
 			title: 'Coalition Evolution',
 			description: 'A literature review on how coalitions of power change over time.',
+			tableOfContents: false,
 			sidebar: [
 				{
 					label: 'Sections',
