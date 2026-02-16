@@ -1,3 +1,8 @@
-.hero {
+.hero .stack {
+	max-width: 100%;
+}
+
+.hero .copy {
+	max-width: 100%;
 	text-align: center;
 }
