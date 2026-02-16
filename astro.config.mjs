@@ -16,12 +16,12 @@ export default defineConfig({
 					autogenerate: { directory: 'sections' },
 				},
 				{
-					label: 'Papers',
-					autogenerate: { directory: 'papers' },
-				},
-				{
 					label: 'Terminology',
 					autogenerate: { directory: 'terminology' },
+				},
+				{
+					label: 'Papers',
+					autogenerate: { directory: 'papers' },
 				},
 			],
 		}),
