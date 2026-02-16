@@ -11,6 +11,7 @@ export default defineConfig({
 			title: 'Coalition Evolution',
 			description: 'A literature review on how coalitions of power change over time.',
 			tableOfContents: false,
+			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{
 					label: 'Sections',
