@@ -1,8 +1,15 @@
-.hero .stack {
-	max-width: 100%;
+.hero {
+	grid-template-columns: 1fr !important;
 }
 
 .hero .copy {
-	max-width: 100%;
-	text-align: center;
+	align-items: center !important;
+}
+
+.hero .copy > * {
+	max-width: 100% !important;
+}
+
+.hero .stack {
+	text-align: center !important;
 }
